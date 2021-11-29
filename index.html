@@ -181,14 +181,17 @@
     // 判断 ua
     if (os.isAndroid || os.isPhone) {
         console.log("手机");
-        var rand = Math.round(Math.random() * mobileImgList.length);
+        var rand = Math.round(Math.random() * (mobileImgList.length - 1));
         var url = "url('" + mobileImgList[rand] + "')";
         bgObj[0].style.backgroundImage = url;
     } else if (os.isTablet) {
         console.log("平板");
+        var rand = Math.round(Math.random() * (pcImgList.length - 1));
+        var url = "url('" + pcImgList[rand] + "')";
+        bgObj[0].style.backgroundImage = url;
     } else if (os.isPc) {
         console.log("电脑");
-        var rand = Math.round(Math.random() * pcImgList.length);
+        var rand = Math.round(Math.random() * (pcImgList.length - 1));
         var url = "url('" + pcImgList[rand] + "')";
         bgObj[0].style.backgroundImage = url;
     }
